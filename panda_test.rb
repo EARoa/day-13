@@ -28,8 +28,10 @@ class PandaTest < MiniTest::Test
 
 def test_panda_sleeps_a_bunch
   panda = Panda.new
-  assert_equal true, panda.sleeps?
+  percent = panda.sleep_percentage
+  assert_equal true, (percent >= bunch_threshold)
 end
+
 
 
 end
